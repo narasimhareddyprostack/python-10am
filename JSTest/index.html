@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="bodyload()">
+    <section></section>
+    <figure>
+      <legend>Your city</legend>
+      <select id="citylist"></select>
+    </figure>
+    <script>
+      function bodyload() {
+        var sec = document.querySelector("section");
+        var para = document.createElement("p");
+        para.textContent = "Hello , GM";
+        sec.appendChild(para);
+
+        var cities = ["ong", "hyd"];
+        var lstCities = document.getElementById("citylist");
+        for (var item of cities) {
+          var opt = document.createElement("option");
+          opt.text = item;
+          opt.value = item;
+          lstCities.appendChild(opt);
+        }
+      }
+    </script>
+  </body>
+</html>

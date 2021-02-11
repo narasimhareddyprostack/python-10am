@@ -1,1 +1,1 @@
-print('Hello, GN')
+print(2+3)
